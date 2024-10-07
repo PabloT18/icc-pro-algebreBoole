@@ -28,11 +28,10 @@ def activar_alarma(A, B, C):
 Un sistema de control en una fábrica determina si debe encender una máquina de seguridad dependiendo de varios sensores:
 
 ```python
-def encender_maquina(A, B, C):
-    if (A and B) or (A and not C) or (not A and B) or (not A and not B):
-        return "Encender Máquina"
-    else:
-        return "Apagar Máquina"
+if (A and B) or (A and not C) or (not A and B) or (not A and not B):
+    print ("Encender Máquina")
+else:
+     print ("Apagar Máquina")
 ```
 
 **Pregunta**: Simplifica la condición lógica utilizando las leyes del álgebra de Boole para hacer el código más legible y eficiente.
@@ -40,17 +39,17 @@ def encender_maquina(A, B, C):
 ---
 
 ### **Ejercicio 3: Verificación de Acceso**
-
 #### **Enunciado:**
-
 Una aplicación web utiliza una lógica compleja para verificar si un usuario tiene acceso a ciertos recursos. El código actual es el siguiente:
 
 ```python
-def verificar_acceso(admin, usuario_activo, tiene_permiso):
-    if (admin and usuario_activo) or (admin and not tiene_permiso) or (not admin and usuario_activo):
-        return "Acceso Permitido"
-    else:
-        return "Acceso Denegado"
+admin= True
+usuario_activo= True
+tiene_permiso = False
+if (admin and usuario_activo) or (admin and not tiene_permiso) or (not admin and usuario_activo):
+    return "Acceso Permitido"
+else:
+    return "Acceso Denegado"
 ```
 
 **Pregunta**: ¿Cómo puedes simplificar la condición lógica para optimizar el código? Aplica las leyes del álgebra de Boole para reducir la cantidad de evaluaciones necesarias.
@@ -64,29 +63,33 @@ def verificar_acceso(admin, usuario_activo, tiene_permiso):
 Un sistema de detección de movimiento utiliza sensores que generan un patrón de activación para encender las luces automáticamente. El código para encender las luces es el siguiente:
 
 ```python
-def encender_luces(sensor1, sensor2, sensor3):
-    if (sensor1 and sensor2) or (sensor1 and not sensor2) or (not sensor1 and sensor3):
-        return "Luces encendidas"
-    else:
-        return "Luces apagadas"
+sensor1 =  True
+sensor2 = False
+sensor3 = False
+if (sensor1 and sensor2) or (sensor1 and not sensor2) or (not sensor1 and sensor3):
+    print ( "Luces encendidas")
+else:
+    print ( "Luces apagadas")
 ```
 
 **Pregunta**: Aplica las leyes del álgebra de Boole para simplificar esta expresión y mejorar la eficiencia del sistema.
 
 ---
 
-### **Ejercicio 5: Sistema de Ventilación Inteligente**
+### **Ejercicio 5: Sistema de Ventilación**
 
 #### **Enunciado:**
 
 El sistema de ventilación de un edificio se activa si las condiciones de temperatura y CO2 son críticas. El código original utiliza una condición lógica larga:
 
 ```python
-def activar_ventilacion(temp_alta, co2_alto, puerta_abierta):
-    if (temp_alta and co2_alto) or (temp_alta and not puerta_abierta) or (not temp_alta and co2_alto):
-        return "Ventilación Activada"
-    else:
-        return "Ventilación Desactivada"
+temp_alta = True
+co2_alto= True
+puerta_abierta= True
+if (temp_alta and co2_alto) or (temp_alta and not puerta_abierta) or (not temp_alta and co2_alto):
+    print( "Ventilación Activada")
+else:
+    print( "Ventilación Desactivada")
 ```
 
 **Pregunta**: Simplifica la condición utilizando las leyes del álgebra de Boole y optimiza el código.
@@ -95,16 +98,16 @@ def activar_ventilacion(temp_alta, co2_alto, puerta_abierta):
 
 ### **Ejercicio 6: Sistema de Luces de Emergencia**
 
-#### **Enunciado:**
-
 En un sistema de luces de emergencia, las luces se encienden si se cumplen ciertas condiciones. El código que lo controla es el siguiente:
 
 ```python
-def luces_emergencia(encendido_general, bateria_baja, fallo_sistema):
-    if (encendido_general and bateria_baja) or (encendido_general and fallo_sistema) or (not encendido_general and bateria_baja):
-        return "Luces de emergencia activadas"
-    else:
-        return "Luces de emergencia desactivadas"
+encendido_general = True
+bateria_baja = True
+fallo_sistema = True
+if (encendido_general and bateria_baja) or (encendido_general and fallo_sistema) or (not encendido_general and bateria_baja):
+    print( "Luces de emergencia activadas)
+else:
+    print( "Luces de emergencia desactivadas")
 ```
 
 **Pregunta**: Utiliza las leyes del álgebra de Boole para simplificar esta condición lógica.
